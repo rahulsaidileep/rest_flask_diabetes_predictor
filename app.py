@@ -25,7 +25,10 @@ def predicted():
 
     Y_pred = model.predict(X)
 
-    return str(Y_pred);
+    return str(Y_pred)
+
+def get_port():
+  return int(os.environ.get("PORT", 5000))
 
 if __name__=="__main__":
-    app.run(debug=True, port=int(os.environ.get('PORT', 5500)))
+    app.run((debug=False, port=get_port(), host='0.0.0.0')
