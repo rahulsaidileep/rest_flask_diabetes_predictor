@@ -2,6 +2,7 @@
 from flask import Flask ,request,jsonify
 import numpy as np
 import joblib
+import os
 
 app = Flask(__name__)
 
@@ -27,4 +28,4 @@ def predicted():
     return str(Y_pred);
 
 if __name__=="__main__":
-    app.run()
+    app.run(debug=True, port=int(os.environ.get('PORT', 5500)))
