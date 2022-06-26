@@ -31,4 +31,4 @@ def get_port():
   return int(os.environ.get("PORT", 5000))
 
 if __name__=="__main__":
-    app.run((debug=False, port=get_port(), host='0.0.0.0')
+    app.run(debug=true)
